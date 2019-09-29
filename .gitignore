@@ -8,5 +8,4 @@ src/main/obj
 .DS_Store
 /build
 /captures
-.cxx
-!/gradle/wrapper/gradle-wrapper.jar
+.cxx/
