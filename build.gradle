@@ -58,16 +58,16 @@ android {
         pickFirst 'lib/**/*'
     }
 
-    externalNativeBuild {
-        ndkBuild {
-            path file('src/main/jni/Android.mk')
-        }
-    }
-
     sourceSets{
         main {
             jni.srcDirs = []
             jniLibs.srcDir 'src/main/jni/lib'
+        }
+    }
+
+    externalNativeBuild {
+        ndkBuild {
+            path file('src/main/jni/Android.mk')
         }
     }
 }
