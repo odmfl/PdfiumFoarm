@@ -9,4 +9,5 @@ src/main/obj
 /build
 /captures
 .cxx/
-!/src/main/jni/lib/arm64-v8a/
+!/src/main/jni/lib/**/*.so
+!/gradle/wrapper/gradle-wrapper.jar
