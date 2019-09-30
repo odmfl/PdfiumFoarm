@@ -9,5 +9,3 @@ src/main/obj
 /build
 /captures
 .cxx/
-!/src/main/jni/lib/**/*.so
-!/gradle/wrapper/gradle-wrapper.jar
