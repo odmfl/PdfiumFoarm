@@ -10,10 +10,6 @@ buildscript {
 }
 
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'maven-publish'
-
-
 
 android {
     compileSdkVersion 31
@@ -23,6 +19,7 @@ android {
         targetSdkVersion 31
         versionCode 1
         versionName "2.0.2"
+        buildConfigField 'String', 'VERSION_NAME', "\"${defaultConfig.versionName}\""
     }
     buildTypes {
         release {
@@ -31,20 +28,10 @@ android {
         }
     }
 
-    packagingOptions{
-        pickFirst 'lib/**/*'
-    }
-
     sourceSets{
         main {
             jni.srcDirs = []
             jniLibs.srcDir 'src/main/libs'
-        }
-    }
-
-    externalNativeBuild {
-        ndkBuild {
-            path file('src/main/jni/Android.mk')
         }
     }
 }
@@ -56,15 +43,4 @@ repositories {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    
 }
-
-// Maven Publishing
- ext {
-     PUBLISH_GROUP_ID = 'com.github.odmfl'
-     PUBLISH_VERSION = "2.0.1"
-     PUBLISH_ARTIFACT_ID = 'pdfium-foarm'
- }
-
-
-
