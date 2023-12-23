@@ -59,4 +59,12 @@ dependencies {
     
 }
 
+// Maven Publishing
+ ext {
+     PUBLISH_GROUP_ID = 'com.github.odmfl'
+     PUBLISH_VERSION = "2.0.1"
+     PUBLISH_ARTIFACT_ID = 'pdfium-foarm'
+ }
+
+
 
